@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    base: 'oauth-docs/',
     integrations: [
         starlight({
             title: 'AURA Oauth documentation',
