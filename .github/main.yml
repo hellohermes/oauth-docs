@@ -21,4 +21,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          branch: build
           folder: dist # The folder the action should deploy.
