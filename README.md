@@ -55,7 +55,7 @@ The code param supplied then needs to be converted to an access token in the nex
 
 Once an authorisation code has been created, this now needs to be converted to a long life access token that will grant access to the users information.
 
-##### Required parameters for POST request
+##### Required form data for POST request
 ```js
 grant_type
 client_id
@@ -72,11 +72,10 @@ POST https://{domain}/oauth/token
 
 ##### Headers
 ```
-Accept: application/json
-Content-Type: application/json
+Content-Type: multipart/form-data;
 ```
 
-##### POST Parameters example:
+##### POST data example:
 ```
 grant_type: authorization_code
 client_id: {client_id}
@@ -153,7 +152,7 @@ The full API docs are available here: https://auraishere.stoplight.io/docs/api-d
 
 While the tokens have a long life, you may be required to refresh the token for it to be used again. To refresh a token you will make a similar request to convert a token but instead pass the `refresh_token` generated at step 2.
 
-##### Required parameters for POST request
+##### Required form data for POST request
 ```js
 grant_type
 client_id
@@ -170,11 +169,10 @@ POST https://{domain}/oauth/token
 
 ##### Headers
 ```
-Accept: application/json
-Content-Type: application/json
+Content-Type: multipart/form-data;
 ```
 
-##### POST Parameters example:
+##### POST data example:
 ```
 grant_type: refresh_token
 client_id: {client_id}
