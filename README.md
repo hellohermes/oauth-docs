@@ -157,7 +157,6 @@ While the tokens have a long life, you may be required to refresh the token for 
 grant_type
 client_id
 client_secret
-redirect_url
 code
 ```
 
